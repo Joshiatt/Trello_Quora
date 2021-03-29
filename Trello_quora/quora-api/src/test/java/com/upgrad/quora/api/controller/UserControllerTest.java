@@ -1,4 +1,7 @@
+feature/answer-api
+/*package com.upgrad.quora.api.controller;
 package com.upgrad.quora.api.controller;
+master
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,6 +40,10 @@ public class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("code").value("SGR-002"));
     }
 
+feature/answer-api
+
+
+master
     //This test case passes when you try to signout but the JWT token entered does not exist in the database.
     @Test
     public void signoutWithNonExistingAccessToken() throws Exception {
@@ -45,3 +52,6 @@ public class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("code").value("SGR-001"));
     }
 }
+feature/answer-api
+*/
+master
