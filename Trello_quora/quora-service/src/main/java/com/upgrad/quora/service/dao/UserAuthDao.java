@@ -10,7 +10,8 @@ import javax.persistence.PersistenceContext;
 @Repository
 public class UserAuthDao {
 
-    @PersistenceContext private EntityManager entityManager;
+  @PersistenceContext private EntityManager entityManager;
+
 
     /**
      * Gets the user auth information based on the access token.
@@ -20,10 +21,7 @@ public class UserAuthDao {
      */
     public UserAuthEntity getUserAuthByToken(final String accessToken) {
         try {
-            return entityManager
-                    .createNamedQuery("userAuthByAccessToken", UserAuthEntity.class)
-                    .setParameter("accessToken", accessToken)
-                    .getSingleResult();
+            return entityManager.createNamedQuery("userAuthByAccessToken", UserAuthEntity.class).setParameter("accessToken", accessToken).getSingleResult();
         } catch (NoResultException nre) {
             return null;
         }
