@@ -10,8 +10,8 @@ import javax.persistence.PersistenceContext;
 @Repository
 public class UserAuthDao {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+  @PersistenceContext private EntityManager entityManager;
+
 
     /**
      * Gets the user auth information based on the access token.
@@ -29,6 +29,7 @@ public class UserAuthDao {
 
     /**
      * Persist UserAuthEntity object in DB.
+     *
      * @param userAuthEntity to be persisted in the DB.
      * @return Persisted UserAuthEntity object
      */
@@ -39,6 +40,7 @@ public class UserAuthDao {
 
     /**
      * Updates the UserAuthEntity object present in the DB.
+     *
      * @param updatedUserAuthEntity Persisted UserAuthEntity object
      */
     public void updateUserAuth(final UserAuthEntity updatedUserAuthEntity) {

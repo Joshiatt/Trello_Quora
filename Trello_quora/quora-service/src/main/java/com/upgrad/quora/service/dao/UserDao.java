@@ -10,8 +10,8 @@ import javax.persistence.PersistenceContext;
 @Repository
 public class UserDao {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    @PersistenceContext private EntityManager entityManager;
+
 
     /**
      * Fetch a single user by given id from the DB.
@@ -74,11 +74,11 @@ public class UserDao {
      * @param userId Id of the user whose information is to be fetched.
      * @return User details which is to be deleted if exist in the DB else null.
      */
-
     public UserEntity deleteUser(final String userId) {
         UserEntity deleteUser = getUserById( userId );
         if (deleteUser != null) {
             this.entityManager.remove( deleteUser );
+
         }
         return deleteUser;
     }
